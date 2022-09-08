@@ -53,19 +53,19 @@ def calculate_sizes(v):
 # Runtime: O(h)
 def find_vertex(r):
     n = r.size
-    def rec_find(r):
+    def rec_find(root):
 
-        if not r:
+        if not root:
             return None
 
-        l = 0 if not r.left else r.left.size
-        r = 0 if not r.right else r.right.size
+        l = 0 if not root.left else root.left.size
+        r = 0 if not root.right else root.right.size
 
         if l <= n//2 and r <= n//2:
-            return r
+            return root
 
-        l_vert = rec_find(r.left)
+        l_vert = rec_find(root.left)
         if l_vert:
             return l_vert
-        return rec_find(r.right)
+        return rec_find(root.right)
     return rec_find(r)
