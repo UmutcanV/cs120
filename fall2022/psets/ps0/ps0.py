@@ -69,22 +69,3 @@ def find_vertex(r):
             return l_vert
         return rec_find(r.right)
     return rec_find(r)
-
-
-# # def find_vertex(r): 
-  
-#     n = calculate_sizes(r) / 2
-
-#    def rec_find(vertex): 
-        
-#         if not vertex:
-#             return None
-        
-#         l = 
-#         if r.left is None and r.right is None:
-#             return r
-
-#         if r.left.size <= n and r.right.size <= n:
-
-
-#     return rec_find(r, n)
